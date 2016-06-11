@@ -1,0 +1,158 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.popularmoviesstage1.MovieDetailActivityFragment">
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#009688"
+            android:textColor="@color/text_color"
+            android:gravity="center"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/detail_image"
+                    android:layout_width="150dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="220dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/detail_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="15dp"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+               <!-- <Button
+                    android:id="@+id/favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_vertical"
+                    android:text="Mark As \n Favourite"
+                    android:background="@drawable/heart_grey"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/text_color"/>-->
+                <ImageView
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/heart_grey"
+                    android:id="@+id/favourite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="favourites" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/detail_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <View android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000"/>
+
+        <TextView
+            android:id="@+id/Trailers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="3dp"
+            android:paddingLeft="5dp"
+           android:text="Trailers:"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+        <!--<ListView
+            android:id="@+id/video"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />-->
+
+        <com.example.android.popularmoviesstage1.NonScrollListView
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:gravity="left"
+            android:padding="5px"
+            />
+
+
+        <View android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000"/>
+
+        <TextView
+            android:id="@+id/Reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:gravity="left"
+            android:text="Reviews:"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+        <!--<Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trailer 1"
+            />-->
+
+        <com.example.android.popularmoviesstage1.NonScrollListView
+            android:id="@+id/listview"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
